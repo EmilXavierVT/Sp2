@@ -2,12 +2,14 @@ public class LibraryRoyalityCalculator {
 
     public static void main(String[] args) {
         //author
-        Author JK = new Author("J.K.Rollin");
+        Author JK = new Author("J.K.Rowling");
         Author Test = new Author("Olga Ravn");
+
 
         //books
         PrintedBook HarryPotter = new PrintedBook("Harry potter","SKØN",50,223);
         AudioBook HarryPotterEBook = new AudioBook("Harry potter","SKØN",50,223);
+
 
 
         PrintedBook test1 = new PrintedBook("Celestine", "SKØN",140,166);
@@ -18,7 +20,10 @@ public class LibraryRoyalityCalculator {
         Test.addTitle(test1);
         Test.addTitle(test2);
 
-        System.out.println("Total Royality: " + Test.calculateTotalPay() + " DKK");
+        JK.addTitle(new EAudioBook("Harry Potter", "FAG",97,50,205,482));
+        JK.addTitle(new EBook("Harry Potter", "FAG",1,97,50,205,360000,true));
+
+        System.out.println("Total Royality for "+JK.getName()+":   "  + JK.calculateTotalPay() + " DKK");
 
 
 

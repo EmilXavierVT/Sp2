@@ -1,4 +1,4 @@
-public class AudioBook extends Title{
+public class AudioBook extends Title implements IAudioBook{
 
     final private int  durationMinutes;
 
