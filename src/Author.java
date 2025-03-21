@@ -3,11 +3,11 @@ import java.util.ArrayList;
 
 public class  Author {
     private String name;
-    private ArrayList<Title> titles;
+    private ArrayList<Title> titles = new ArrayList<>();;
 
     public Author(String name){
         this.name =name;
-        this.titles = new ArrayList<>();
+
     }
 
     public void addTitle(Title title){
@@ -29,4 +29,12 @@ public class  Author {
     public String getName(){
         return name;
     }
+
+    @Override
+    public String toString() {
+
+        return name + ": " + calculateTotalPay() + " kr";
+    }
+
 }
+

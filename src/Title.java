@@ -5,43 +5,32 @@ public abstract class Title {
     protected double rate = 0.067574;
 
 
-    public Title(String title, String literatureType, int copies){
+    public Title(String title, String literatureType){
     this.title = title;
     this.literatureType = literatureType;
-    this.copies = copies;
-    }
-    public double calculateRoyalty(){
 
+    }
+    protected abstract double calculatePoints();
+
+    public double calculateRoyalty(){
 
         return calculatePoints()*rate;
     }
 
 
-    protected abstract double calculatePoints();
+
 
 
     protected double convertLiteratureType(){
         double Mweight= 0;
-       switch (literatureType) {
-           case "BI":
-               Mweight = 3;
-               break;
-           case "TE":
-               Mweight = 3;
-               break;
-           case "LYRIK":
-               Mweight = 6;
-               break;
-           case "SKØN":
-               Mweight = 1.7;
-               break;
-           case "FAG":
-               Mweight = 1;
-               break;
-           default:
-               System.out.println("Not a valid literature type!");
-
-       }
+        switch (literatureType) {
+            case "BI" -> Mweight = 3;
+            case "TE" -> Mweight = 3;
+            case "LYRIK" -> Mweight = 6;
+            case "SKØN" -> Mweight = 1.7;
+            case "FAG" -> Mweight = 1;
+            default -> System.out.println("Not a valid literature type!");
+        }
        return Mweight;
     }
 @Override

@@ -1,8 +1,9 @@
 public class EBook extends NetBook{
     private double characters;
     private boolean illustrated;
-    public EBook(String title, String literatureType, int copies, int reach, int availability, int use,double characters,boolean illustrated) {
-        super(title, literatureType, copies, availability , reach, use);
+
+    public EBook(String title, String literatureType, int availability,int reach, int use,double character,boolean illustrated) {
+        super(title, literatureType, availability , reach, use);
         this.characters=characters;
         this.illustrated=illustrated;
 
@@ -16,6 +17,6 @@ public class EBook extends NetBook{
 
     @Override
     protected double calculatePoints() {
-        return calculatePages() * convertLiteratureType() *  ((reach*5)+(availability*0.5) + use);
+        return this.calculatePages() * this.convertLiteratureType() *  this.getPseudoCopies();
     }
 }

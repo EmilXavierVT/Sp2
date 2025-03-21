@@ -20,15 +20,12 @@ public class LibraryRoyalityCalculator {
         Test.addTitle(test1);
         Test.addTitle(test2);
 
-        JK.addTitle(new EAudioBook("Harry Potter", "FAG",97,50,205,482));
-        JK.addTitle(new EBook("Harry Potter", "FAG",1,97,50,205,360000,true));
+        JK.addTitle(new EAudioBook("Harry Potter and the Audio Book", "FAG",97,50,205,482));
+        JK.addTitle(new EBook("Harry Potter", "FAG",97,50,205,360000,true));
 
-        System.out.println("Total Royality for "+JK.getName()+":   "  + JK.calculateTotalPay() + " DKK");
+        //System.out.println("Total Royality for "+JK.getName()+":   "  + JK.calculateTotalPay() + " DKK");
 
-
-
-
-
+        System.out.println(JK);
 
 
     }
